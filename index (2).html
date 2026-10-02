@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menda senga aytadigan gapim bor...</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fon: yurakchalar va yomg'ir -->
+  <div id="hearts" aria-hidden="true"></div>
+  <div id="rain" aria-hidden="true"></div>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <!-- Musiqa: music/blue-bird.mp3 faylini o'zingiz qo'ying -->
+  <audio id="music" src="music/blue-bird.mp3" loop preload="auto"></audio>
+  <button id="muteBtn" class="mute" aria-label="Musiqa" hidden>🔊</button>
+
+  <!-- BOSH SAHIFA -->
+  <main class="screen active" id="home">
+    <h1 class="big">🥺 Menda senga aytadigan gapim bor...</h1>
+    <button class="btn start" id="startBtn">Boshlash</button>
+  </main>
+
+  <!-- 1-BO'LIM: SAVOL -->
+  <main class="screen" id="question">
+    <h1 class="huge">Meni kechirasanmi? 🥺</h1>
+    <p class="msg" id="msg"></p>
+    <div class="choices" id="choices">
+      <button class="btn yes" id="yesBtn">Ha, kechiraman ❤️</button>
+      <button class="btn no" id="noBtn">Yo‘q, kechirmayman 😤</button>
+    </div>
+  </main>
+
+  <!-- OXIRGI SAHIFA -->
+  <main class="screen" id="final">
+    <div class="photo" id="photoBox">
+      <img id="photo" src="photo/xotira.jpg" alt="Birgalikdagi xotira">
+      <div class="photo-empty" id="photoEmpty">📸 Birgalikdagi xotira uchun joy</div>
+    </div>
+    <h1 class="big">Rahmat ❤️</h1>
+    <p class="letter">
+      “Men seni majburlamoqchi emasman.<br>
+      Shunchaki kechirim so‘rash men uchun muhim edi. ❤️”
+    </p>
+    <button class="btn restart" id="restartBtn">Boshidan ko‘rish</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
